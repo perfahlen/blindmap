@@ -1,0 +1,39 @@
+﻿<Window x:Class="Map.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Map"
+        mc:Ignorable="d"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0">Bing maps key:</Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="bingmapskey" KeyUp="bingmapskey_KeyUp" Text=""></TextBox>
+        <Label Grid.Row="1" Grid.Column="0">Search:</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="searchfield" KeyUp="searchfield_KeyUp"></TextBox>
+        <Label Grid.Row="2" Grid.Column="0">Result:</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="resultField"></TextBox>
+
+        <m:Map 
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+                Name="map"     
+                CredentialsProvider=""
+               Mouse.MouseDown="map_MouseDown"
+               Mouse.MouseMove="map_MouseMove" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
+               />
+
+    </Grid>
+</Window>
