@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlindMap", "Map1\BlindMap.csproj", "{E1B4B965-E252-463E-A423-C9D3A181D6AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlindMap", "Map\BlindMap.csproj", "{E1B4B965-E252-463E-A423-C9D3A181D6AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
